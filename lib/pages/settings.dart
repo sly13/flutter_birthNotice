@@ -20,7 +20,7 @@ class Settings extends StatelessWidget {
             child: RaisedButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut().then((value) {
-                  Navigator.of(context).pop();
+                  Navigator.of(context).pushNamed('/signIn');
                 });
               },
               child: Text('Log out'),
